@@ -21,7 +21,9 @@ Pod::Spec.new do |s|
   s.resources    = 'Tangram/Resources/*'
   s.source_files = 'Tangram/**/*.{h,m}'
   
-  s.dependency 'SDWebImage', '~> 5.0'
+  s.subspec "Core" do |core|
+    core.dependency 'SDWebImage', '~> 4.2'
+  end
   s.dependency 'LazyScroll', '1.0.1'
   s.dependency 'VirtualView', '1.2.7'
   
